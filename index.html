@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaltinForge — AI Software Engineering Team</title>
+    <style>
+        :root {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --danger-light: #fef2f2;
+            --danger-border: #fecaca;
+            --danger-text: #dc2626;
+            --success-light: #f0fdf4;
+            --success-border: #bbf7d0;
+            --success-text: #16a34a;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 60px; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header / Hero Section */
+        header { text-align: center; padding: 60px 20px 40px; }
+        .badge { display: inline-flex; align-items: center; gap: 8px; background: #dcfce7; color: #166534; font-size: 0.875rem; font-weight: 600; padding: 6px 16px; border-radius: 50px; margin-bottom: 20px; }
+        .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 8px #22c55e; }
+        .avatar-box { width: 80px; height: 80px; background: var(--primary); color: white; font-size: 2rem; font-weight: bold; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3); }
+        h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 12px; }
+        .tagline { font-size: 1.25rem; color: var(--text-muted); max-width: 650px; margin: 0 auto; }
+
+        /* Section Global */
+        section { margin-top: 50px; }
+        .section-title { text-align: center; font-size: 1.75rem; font-weight: 700; margin-bottom: 30px; }
+
+        /* Problem & Solution Cards */
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .card-chaos { background: var(--danger-light); border-color: var(--danger-border); }
+        .card-solution { background: var(--success-light); border-color: var(--success-border); }
+        .card h3 { font-size: 1.25rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .card-chaos h3 { color: var(--danger-text); }
+        .card-solution h3 { color: var(--success-text); }
+        .card ul { list-style: none; }
+        .card ul li { margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start; }
+
+        /* Core Capabilities */
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 25px; text-align: center; }
+        .feature-icon { font-size: 2rem; margin-bottom: 15px; }
+        .feature-card h4 { font-size: 1.1rem; margin-bottom: 8px; }
+        .feature-card p { font-size: 0.9rem; color: var(--text-muted); }
+
+        /* Interactive Simulation */
+        .sim-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 25px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); }
+        .sim-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; justify-content: center; }
+        .btn-scenario { background: #f1f5f9; border: 1px solid var(--border); padding: 8px 16px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .btn-scenario:hover { background: var(--primary); color: white; border-color: var(--primary); }
+        .chat-window { background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 20px; min-height: 180px; display: flex; flex-direction: column; gap: 12px; }
+        .msg { padding: 10px 14px; border-radius: 10px; max-width: 80%; font-size: 0.9rem; }
+        .msg-user { background: var(--primary); color: white; align-self: flex-end; }
+        .msg-agent { background: #ffffff; border: 1px solid var(--border); color: var(--text-main); align-self: flex-start; }
+        .typing { display: none; align-self: flex-start; font-size: 0.85rem; color: var(--text-muted); italic; }
+
+        /* Footer & CTA */
+        footer { text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); }
+        .btn-cta { display: inline-block; background: var(--primary); color: white; font-size: 1.1rem; font-weight: 700; text-decoration: none; padding: 16px 36px; border-radius: 12px; transition: background 0.2s, transform 0.1s; box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4); }
+        .btn-cta:hover { background: var(--primary-hover); transform: translateY(-2px); }
+        .footer-text { margin-top: 25px; font-size: 0.875rem; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1. HERO SECTION -->
+        <header>
+            <div class="badge"><span class="dot"></span> Status: Active & Ready 24/7</div>
+            <div class="avatar-box">FF</div>
+            <h1>FaltinForge</h1>
+            <p class="tagline">AI Software Engineering Team cerdas untuk ekosistem aplikasi skala besar tanpa risiko halusinasi.</p>
+        </header>
+
+        <!-- 2. PROBLEM & SOLUTION CARD -->
+        <section>
+            <h2 class="section-title">Mengapa FaltinForge?</h2>
+            <div class="grid-2">
+                <div class="card card-chaos">
+                    <h3>❌ The Chaos</h3>
+                    <ul>
+                        <li>⚠️ <strong>Unstructured Requirements:</strong> Spesifikasi proyek berantakan dan membingungkan tim.</li>
+                        <li>⚠️ <strong>Complex Codebase:</strong> Sulit memahami konteks aplikasi yang sudah sangat besar.</li>
+                        <li>⚠️ <strong>Human Error:</strong> Risiko bug fatal dan kesalahan manual saat integrasi kode.</li>
+                    </ul>
+                </div>
+                <div class="card card-solution">
+                    <h3>✅ The Solution</h3>
+                    <ul>
+                        <li>✨ <strong>Zero-Hallucination Context:</strong> Memahami arsitektur besar secara akurat & terstruktur.</li>
+                        <li>✨ <strong>Seamless Tools Integration:</strong> Terhubung penuh ke alur kerja pengembangan modern.</li>
+                        <li>✨ <strong>Human-in-the-Loop Safety:</strong> Kontrol penuh manusia sebelum kode di-deploy.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CORE CAPABILITIES -->
+        <section>
+            <h2 class="section-title">Solusi & Integrasi Tools</h2>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="feature-icon">📂</div>
+                    <h4>Hermes & Obsidian</h4>
+                    <p>Manajemen pengetahuan dan restrukturisasi requirement tim agar terorganisir rapi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐙</div>
+                    <h4>GitHub & Notion</h4>
+                    <p>Sinkronisasi repositori kode besar secara otomatis dengan dokumentasi proyek yang selalu up-to-date.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Human-in-the-Loop</h4>
+                    <p>Mekanisme verifikasi dan validasi keputusan kritis oleh pakar sebelum eksekusi akhir.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. INTERACTIVE SIMULATION -->
+        <section>
+            <h2 class="section-title">Simulasi Karyawan Digital</h2>
+            <div class="sim-box">
+                <div class="sim-buttons">
+                    <button class="btn-scenario" onclick="runSim('req')">📋 Rapikan Requirement</button>
+                    <button class="btn-scenario" onclick="runSim('code')">🔍 Analisis Codebase Besar</button>
+                    <button class="btn-scenario" onclick="runSim('hitl')">🛡️ Minta Approval (HITL)</button>
+                </div>
+                <div class="chat-window" id="chatWindow">
+                    <div class="msg msg-agent">Halo! Pilih skenario di atas untuk melihat bagaimana FaltinForge bekerja.</div>
+                </div>
+                <div class="typing" id="typingIndicator">FaltinForge sedang mengetik...</div>
+            </div>
+        </section>
+
+        <!-- 5. FOOTER & CTA -->
+        <footer>
+            <a href="https://portfolio.me" target="_blank" class="btn-cta">Lihat Portofolio Lengkap →</a>
+            <p class="footer-text">Built with AI · AI Builder Bootcamp Showcase</p>
+        </footer>
+    </div>
+
+    <script>
+        const scenarios = {
+            req: {
+                user: "Tolong rapikan PRD dan requirement fitur baru ini yang masih berantakan.",
+                agent: "Requirement berhasil dianalisis dan dirapikan ke dalam Notion! Struktur user story dan kriteria penerimaan telah disesuaikan."
+            },
+            code: {
+                user: "Bagaimana alur fungsi autentikasi di codebase besar repository GitHub ini?",
+                agent: "Menganalisis repository GitHub tanpa halusinasi... Ditemukan alur OAuth di /src/auth/index.ts. Dokumentasi Obsidian diperbarui."
+            },
+            hitl: {
+                user: "Lakukan refactoring pada core modul pembayaran ini.",
+                agent: "Saran refactoring telah disiapkan. Memerlukan verifikasi Human-in-the-Loop sebelum meremajakan PR di GitHub."
+            }
+        };
+
+        function runSim(key) {
+            const window = document.getElementById('chatWindow');
+            const typing = document.getElementById('typingIndicator');
+            const data = scenarios[key];
+
+            window.innerHTML = `<div class="msg msg-user">${data.user}</div>`;
+            typing.style.display = 'block';
+
+            setTimeout(() => {
+                typing.style.display = 'none';
+                window.innerHTML += `<div class="msg msg-agent">${data.agent}</div>`;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
