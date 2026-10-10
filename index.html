@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,58 +22,458 @@
             --success-text: #16a34a;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 60px; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
         /* Header / Hero Section */
-        header { text-align: center; padding: 60px 20px 40px; }
-        .badge { display: inline-flex; align-items: center; gap: 8px; background: #dcfce7; color: #166534; font-size: 0.875rem; font-weight: 600; padding: 6px 16px; border-radius: 50px; margin-bottom: 20px; }
-        .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 8px #22c55e; }
-        .avatar-box { width: 80px; height: 80px; background: var(--primary); color: white; font-size: 2rem; font-weight: bold; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3); }
-        h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 12px; }
-        .tagline { font-size: 1.25rem; color: var(--text-muted); max-width: 650px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #22c55e;
+        }
+
+        .avatar-box {
+            width: 80px;
+            height: 80px;
+            background: var(--primary);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 12px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
 
         /* Section Global */
-        section { margin-top: 50px; }
-        .section-title { text-align: center; font-size: 1.75rem; font-weight: 700; margin-bottom: 30px; }
+        section {
+            margin-top: 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
 
         /* Problem & Solution Cards */
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-        .card-chaos { background: var(--danger-light); border-color: var(--danger-border); }
-        .card-solution { background: var(--success-light); border-color: var(--success-border); }
-        .card h3 { font-size: 1.25rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
-        .card-chaos h3 { color: var(--danger-text); }
-        .card-solution h3 { color: var(--success-text); }
-        .card ul { list-style: none; }
-        .card ul li { margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start; }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-chaos {
+            background: var(--danger-light);
+            border-color: var(--danger-border);
+        }
+
+        .card-solution {
+            background: var(--success-light);
+            border-color: var(--success-border);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-chaos h3 {
+            color: var(--danger-text);
+        }
+
+        .card-solution h3 {
+            color: var(--success-text);
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            margin-bottom: 12px;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
 
         /* Core Capabilities */
-        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .feature-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 25px; text-align: center; }
-        .feature-icon { font-size: 2rem; margin-bottom: 15px; }
-        .feature-card h4 { font-size: 1.1rem; margin-bottom: 8px; }
-        .feature-card p { font-size: 0.9rem; color: var(--text-muted); }
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
 
         /* Interactive Simulation */
-        .sim-box { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 25px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); }
-        .sim-buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; justify-content: center; }
-        .btn-scenario { background: #f1f5f9; border: 1px solid var(--border); padding: 8px 16px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; cursor: pointer; transition: all 0.2s; }
-        .btn-scenario:hover { background: var(--primary); color: white; border-color: var(--primary); }
-        .chat-window { background: #f8fafc; border: 1px solid var(--border); border-radius: 12px; padding: 20px; min-height: 180px; display: flex; flex-direction: column; gap: 12px; }
-        .msg { padding: 10px 14px; border-radius: 10px; max-width: 80%; font-size: 0.9rem; }
-        .msg-user { background: var(--primary); color: white; align-self: flex-end; }
-        .msg-agent { background: #ffffff; border: 1px solid var(--border); color: var(--text-main); align-self: flex-start; }
-        .typing { display: none; align-self: flex-start; font-size: 0.85rem; color: var(--text-muted); italic; }
+        .sim-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .sim-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .btn-scenario {
+            background: #f1f5f9;
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-scenario:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .chat-window {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .msg {
+            padding: 10px 14px;
+            border-radius: 10px;
+            max-width: 80%;
+            font-size: 0.9rem;
+        }
+
+        .msg-user {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+        }
+
+        .msg-agent {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            align-self: flex-start;
+        }
+
+        .typing {
+            display: none;
+            align-self: flex-start;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            italic;
+        }
 
         /* Footer & CTA */
-        footer { text-align: center; margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); }
-        .btn-cta { display: inline-block; background: var(--primary); color: white; font-size: 1.1rem; font-weight: 700; text-decoration: none; padding: 16px 36px; border-radius: 12px; transition: background 0.2s, transform 0.1s; box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4); }
-        .btn-cta:hover { background: var(--primary-hover); transform: translateY(-2px); }
-        .footer-text { margin-top: 25px; font-size: 0.875rem; color: var(--text-muted); }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 12px;
+            transition: background 0.2s, transform 0.1s;
+            box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-cta:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+    </style>
+
+    <style>
+        /* ===== Tambahan: section data Supabase (tidak mengubah CSS di atas) ===== */
+        .db-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .db-input,
+        .db-select {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+            min-width: 0;
+        }
+
+        .db-input {
+            flex: 1 1 220px;
+        }
+
+        .db-select {
+            flex: 0 1 220px;
+        }
+
+        .db-input:focus,
+        .db-select:focus {
+            outline: 2px solid var(--primary);
+            border-color: var(--primary);
+        }
+
+        .db-count {
+            margin-left: auto;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .db-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .db-card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 0;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 22px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .db-card h4 {
+            font-size: 1.05rem;
+            overflow-wrap: anywhere;
+        }
+
+        .db-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .db-tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 50px;
+            background: #eff6ff;
+            color: var(--primary);
+        }
+
+        .db-tag.open {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .db-tag.closed {
+            background: var(--danger-light);
+            color: var(--danger-text);
+        }
+
+        .db-rating {
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .db-rating span {
+            font-weight: 400;
+            color: var(--text-muted);
+        }
+
+        .db-line {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            overflow-wrap: anywhere;
+        }
+
+        .db-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 6px;
+        }
+
+        .db-link {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 6px 12px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .db-link:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .db-status {
+            text-align: center;
+            padding: 30px 20px;
+            color: var(--text-muted);
+            background: var(--card-bg);
+            border: 1px dashed var(--border);
+            border-radius: 16px;
+        }
+
+        .db-status.error {
+            background: var(--danger-light);
+            border-color: var(--danger-border);
+            color: var(--danger-text);
+        }
+
+        .db-status[hidden] {
+            display: none;
+        }
+
+        .db-more {
+            display: block;
+            margin: 25px auto 0;
+        }
+
+        .db-more[hidden] {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .db-select {
+                flex: 1 1 100%;
+            }
+
+            .db-count {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .db-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -81,7 +482,8 @@
             <div class="badge"><span class="dot"></span> Status: Active & Ready 24/7</div>
             <div class="avatar-box">FF</div>
             <h1>FaltinForge</h1>
-            <p class="tagline">AI Software Engineering Team cerdas untuk ekosistem aplikasi skala besar tanpa risiko halusinasi.</p>
+            <p class="tagline">AI Software Engineering Team cerdas untuk ekosistem aplikasi skala besar tanpa risiko
+                halusinasi.</p>
         </header>
 
         <!-- 2. PROBLEM & SOLUTION CARD -->
@@ -91,17 +493,23 @@
                 <div class="card card-chaos">
                     <h3>❌ The Chaos</h3>
                     <ul>
-                        <li>⚠️ <strong>Unstructured Requirements:</strong> Spesifikasi proyek berantakan dan membingungkan tim.</li>
-                        <li>⚠️ <strong>Complex Codebase:</strong> Sulit memahami konteks aplikasi yang sudah sangat besar.</li>
-                        <li>⚠️ <strong>Human Error:</strong> Risiko bug fatal dan kesalahan manual saat integrasi kode.</li>
+                        <li>⚠️ <strong>Unstructured Requirements:</strong> Spesifikasi proyek berantakan dan
+                            membingungkan tim.</li>
+                        <li>⚠️ <strong>Complex Codebase:</strong> Sulit memahami konteks aplikasi yang sudah sangat
+                            besar.</li>
+                        <li>⚠️ <strong>Human Error:</strong> Risiko bug fatal dan kesalahan manual saat integrasi kode.
+                        </li>
                     </ul>
                 </div>
                 <div class="card card-solution">
                     <h3>✅ The Solution</h3>
                     <ul>
-                        <li>✨ <strong>Zero-Hallucination Context:</strong> Memahami arsitektur besar secara akurat & terstruktur.</li>
-                        <li>✨ <strong>Seamless Tools Integration:</strong> Terhubung penuh ke alur kerja pengembangan modern.</li>
-                        <li>✨ <strong>Human-in-the-Loop Safety:</strong> Kontrol penuh manusia sebelum kode di-deploy.</li>
+                        <li>✨ <strong>Zero-Hallucination Context:</strong> Memahami arsitektur besar secara akurat &
+                            terstruktur.</li>
+                        <li>✨ <strong>Seamless Tools Integration:</strong> Terhubung penuh ke alur kerja pengembangan
+                            modern.</li>
+                        <li>✨ <strong>Human-in-the-Loop Safety:</strong> Kontrol penuh manusia sebelum kode di-deploy.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -119,7 +527,8 @@
                 <div class="feature-card">
                     <div class="feature-icon">🐙</div>
                     <h4>GitHub & Notion</h4>
-                    <p>Sinkronisasi repositori kode besar secara otomatis dengan dokumentasi proyek yang selalu up-to-date.</p>
+                    <p>Sinkronisasi repositori kode besar secara otomatis dengan dokumentasi proyek yang selalu
+                        up-to-date.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
@@ -139,10 +548,27 @@
                     <button class="btn-scenario" onclick="runSim('hitl')">🛡️ Minta Approval (HITL)</button>
                 </div>
                 <div class="chat-window" id="chatWindow">
-                    <div class="msg msg-agent">Halo! Pilih skenario di atas untuk melihat bagaimana FaltinForge bekerja.</div>
+                    <div class="msg msg-agent">Halo! Pilih skenario di atas untuk melihat bagaimana FaltinForge bekerja.
+                    </div>
                 </div>
                 <div class="typing" id="typingIndicator">FaltinForge sedang mengetik...</div>
             </div>
+        </section>
+
+        <!-- SUPABASE DATA (section tambahan) -->
+        <section id="supabase-data">
+            <h2 class="section-title">Data Google Maps dari Supabase</h2>
+            <div class="db-toolbar">
+                <input type="search" id="dbSearch" class="db-input" placeholder="Cari nama atau alamat"
+                    aria-label="Cari nama atau alamat">
+                <select id="dbCategory" class="db-select" aria-label="Filter kategori">
+                    <option value="">Semua kategori</option>
+                </select>
+                <span class="db-count" id="dbCount" aria-live="polite"></span>
+            </div>
+            <div class="db-status" id="dbStatus">Memuat data...</div>
+            <div class="db-grid" id="dbGrid"></div>
+            <button type="button" class="btn-scenario db-more" id="dbMore" hidden>Tampilkan lebih banyak</button>
         </section>
 
         <!-- 5. FOOTER & CTA -->
@@ -182,5 +608,169 @@
             }, 1000);
         }
     </script>
+
+    <script>
+        /* ===== Tambahan: ambil & tampilkan data Supabase ===== */
+        (function () {
+            // ---------- ISI BAGIAN INI ----------
+            const SUPABASE_URL = 'https://qegrrzrewcnsewqwabjr.supabase.co/rest/v1/gmaps_places?on_conflict=place_id';
+            const SUPABASE_KEY = 'sb_publishable_VrJE6S-u7AnFcrDUT5veoQ_KN1Vc_f5'; // JANGAN pakai service_role di sini
+            const TABLE = 'gmaps_places';
+            const PAGE_SIZE = 12;   // jumlah kartu per tampilan
+            const MAX_ROWS = 500;   // maksimum baris yang diambil
+            // ------------------------------------
+
+            const grid = document.getElementById('dbGrid');
+            const statusBox = document.getElementById('dbStatus');
+            const moreBtn = document.getElementById('dbMore');
+            const countEl = document.getElementById('dbCount');
+            const searchEl = document.getElementById('dbSearch');
+            const categoryEl = document.getElementById('dbCategory');
+
+            let allRows = [];
+            let filtered = [];
+            let shown = 0;
+
+            function el(tag, cls, text) {
+                const node = document.createElement(tag);
+                if (cls) node.className = cls;
+                if (text != null) node.textContent = text; // textContent = aman dari XSS
+                return node;
+            }
+
+            function safeUrl(value) {
+                try {
+                    const u = new URL(value);
+                    return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : null;
+                } catch (e) {
+                    return null;
+                }
+            }
+
+            function makeLink(text, href) {
+                const a = el('a', 'db-link', text);
+                a.href = href;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                return a;
+            }
+
+            function showStatus(message, isError) {
+                statusBox.textContent = message;
+                statusBox.className = 'db-status' + (isError ? ' error' : '');
+                statusBox.hidden = false;
+            }
+
+            function buildCard(r) {
+                const card = el('article', 'db-card');
+                card.appendChild(el('h4', null, r.nama || 'Tanpa nama'));
+
+                const meta = el('div', 'db-meta');
+                if (r.kategori) meta.appendChild(el('span', 'db-tag', r.kategori));
+                if (r.status_operasional === 'buka') {
+                    meta.appendChild(el('span', 'db-tag open', 'Buka'));
+                } else if (r.status_operasional === 'tutup_sementara') {
+                    meta.appendChild(el('span', 'db-tag closed', 'Tutup sementara'));
+                } else if (r.status_operasional === 'tutup_permanen') {
+                    meta.appendChild(el('span', 'db-tag closed', 'Tutup permanen'));
+                }
+                if (meta.children.length) card.appendChild(meta);
+
+                const rating = Number(r.rating);
+                if (r.rating != null && !isNaN(rating)) {
+                    const rt = el('div', 'db-rating', '★ ' + rating.toFixed(1));
+                    if (r.jumlah_review != null) rt.appendChild(el('span', null, ' (' + r.jumlah_review + ' ulasan)'));
+                    card.appendChild(rt);
+                }
+
+                if (r.alamat) card.appendChild(el('p', 'db-line', '📍 ' + r.alamat));
+                if (r.telepon) card.appendChild(el('p', 'db-line', '📞 ' + r.telepon));
+
+                const actions = el('div', 'db-actions');
+                const mapsUrl = safeUrl(r.google_maps_url);
+                const webUrl = safeUrl(r.website);
+                if (mapsUrl) actions.appendChild(makeLink('Buka di Maps', mapsUrl));
+                if (webUrl) actions.appendChild(makeLink('Website', webUrl));
+                if (actions.children.length) card.appendChild(actions);
+
+                return card;
+            }
+
+            function renderMore() {
+                const next = filtered.slice(shown, shown + PAGE_SIZE);
+                next.forEach(function (r) { grid.appendChild(buildCard(r)); });
+                shown += next.length;
+                moreBtn.hidden = shown >= filtered.length;
+
+                if (filtered.length === 0) {
+                    showStatus('Tidak ada data yang cocok dengan pencarian.', false);
+                } else {
+                    statusBox.hidden = true;
+                }
+                countEl.textContent = 'Menampilkan ' + shown + ' dari ' + filtered.length + ' tempat';
+            }
+
+            function applyFilter() {
+                const q = searchEl.value.trim().toLowerCase();
+                const cat = categoryEl.value;
+                filtered = allRows.filter(function (r) {
+                    const text = ((r.nama || '') + ' ' + (r.alamat || '')).toLowerCase();
+                    return (!cat || r.kategori === cat) && (!q || text.indexOf(q) !== -1);
+                });
+                shown = 0;
+                grid.replaceChildren();
+                renderMore();
+            }
+
+            function fillCategories() {
+                const set = new Set();
+                allRows.forEach(function (r) { if (r.kategori) set.add(r.kategori); });
+                Array.from(set).sort().forEach(function (c) {
+                    const opt = el('option', null, c);
+                    opt.value = c;
+                    categoryEl.appendChild(opt);
+                });
+            }
+
+            function load() {
+                if (SUPABASE_URL.indexOf('PROJECT_REF') !== -1 || SUPABASE_KEY.indexOf('ISI_') === 0) {
+                    showStatus('Isi SUPABASE_URL dan SUPABASE_KEY di bagian script paling bawah file ini.', true);
+                    return;
+                }
+
+                const cols = 'place_id,nama,kategori,alamat,telepon,website,rating,jumlah_review,google_maps_url,status_operasional';
+                const url = SUPABASE_URL + '/rest/v1/' + TABLE +
+                    '?select=' + cols + '&order=rating.desc.nullslast&limit=' + MAX_ROWS;
+
+                const headers = { apikey: SUPABASE_KEY };
+                if (SUPABASE_KEY.indexOf('eyJ') === 0) headers.Authorization = 'Bearer ' + SUPABASE_KEY;
+
+                fetch(url, { headers: headers })
+                    .then(function (res) {
+                        if (!res.ok) throw new Error('HTTP ' + res.status);
+                        return res.json();
+                    })
+                    .then(function (rows) {
+                        allRows = Array.isArray(rows) ? rows : [];
+                        if (allRows.length === 0) {
+                            showStatus('Belum ada data di tabel.', false);
+                            return;
+                        }
+                        fillCategories();
+                        applyFilter();
+                    })
+                    .catch(function (err) {
+                        console.error('Gagal memuat data Supabase:', err);
+                        showStatus('Data tidak dapat dimuat. Periksa URL, key, dan policy SELECT di Supabase.', true);
+                    });
+            }
+
+            searchEl.addEventListener('input', applyFilter);
+            categoryEl.addEventListener('change', applyFilter);
+            moreBtn.addEventListener('click', renderMore);
+            load();
+        })();
+    </script>
 </body>
+
 </html>
